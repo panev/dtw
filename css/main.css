@@ -1,0 +1,207 @@
+@font-face {
+  font-family: "Sunn Bold";
+  src: url("/fonts/sunn-bold.woff") format("woff")
+}
+
+@font-face {
+  font-family: "Sunn Regular";
+  src: url("/fonts/sunn-regular.woff") format("woff")
+}
+
+@font-face {
+  font-family: "Garet Medium";
+  src: url("/fonts/garet-medium.woff2") format("woff2")
+}
+
+@font-face {
+  font-family: "Garet Regular";
+  src: url("/fonts/garet-regular.woff2") format("woff2")
+}
+
+:root {
+  --c-gray-light: #9E9E9E;
+  --c-gray-mid: #454545;
+  --c-gray-dark: #333333;
+  --s-base: 480px;
+}
+
+
+
+body {
+  font-family: "Garet Regular", sans-serif;
+  font-feature-settings: "ss03";
+  text-align: center;
+  padding-bottom: 320px;
+} 
+
+h1, h2, h3 {
+  font-weight: inherit;
+  color: var(--c-gray-mid);
+  /*font-feature-settings: "ss02";*/
+}
+
+
+h1 {
+  text-transform: uppercase;
+  font-size: 64px;
+  font-family: "Sunn Regular", sans-serif;
+  margin-top: -24px;
+  font-weight: normal;
+}
+
+h1 span {
+  color: #CDCDCD;
+  font-size: 94px;
+  padding: 0 8px;
+  display: inline-block;
+  transform: translateY(8px);
+}
+
+h2 {
+  font-family: "Sunn Bold", sans-serif;
+  font-size: 40px;
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+
+h3 {
+  font-size: 32px;
+  font-family: "Sunn Regular", sans-serif;
+  margin: 0;
+  font-weight: normal;
+}
+
+.button {
+  height: 52px;
+  border-radius: 8px;
+  border: 2px solid #99DDAC;
+  background: #BAF3CA;
+  color: var(--c-gray-dark);
+  font-family: "Garet Medium", sans-serif;
+  font-size: 16px;
+  padding: 0 24px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.block-common {
+  margin-top: 120px;
+}
+
+.block-info {
+  width: var(--s-base);
+  margin: 0 auto;
+}
+
+.block-info h2 {
+  width: auto;
+  display: inline-block;
+}
+
+.block-info p {
+  text-align: left;
+  color: #545454;
+}
+
+.block-info img {
+  margin-top: 32px;
+}
+
+.form-email {
+  text-align: left;
+  margin-top: 24px;
+}
+
+.form-email label {
+  display: block;
+  text-transform: uppercase;
+  font-family: "Garet Medium", sans-serif;
+}
+
+.form-email input {
+  box-sizing: border-box;
+  height: 52px;
+  border-radius: 8px;
+  padding-left: 4px;
+  min-width: 280px;
+  border: 2px solid var(--c-gray-dark);
+  font-family: "Garet Regular", sans-serif;
+  font-size: 18px;
+}
+
+.form-email button {
+  margin-left: 8px;
+}
+
+.form-email input:focus {
+  outline-color: #99DDAC;
+}
+
+
+.util-pseudo {
+  position: relative;
+}
+
+.util-pseudo::before {
+  left: -78px;
+  top: 24px;
+  content: '';
+  position: absolute;
+  display: block;
+  height: 16px;
+  width: 69px;
+  transform: rotate(180deg);
+  background: url("/img/pseudo.svg") no-repeat;
+}
+
+.util-pseudo::after {
+  right: -78px;
+  top: 24px;
+  content: '';
+  position: absolute;
+  display: block;
+  height: 16px;
+  width: 69px;
+  background: url("/img/pseudo.svg") no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+
+liga: standard ligatures
+dlig: discretionary ligatures
+onum: old style figures
+lnum: lining figures
+tnum: tabular figures
+zero: slashed zero
+frac: fractions
+sups: superscript
+subs: subscript
+smcp: small caps
+c2sc: small capitals from capitals
+case: case-sensitive forms
+hlig: historical ligatures
+calt: contextual alternates
+swsh: swashes
+hist: historical forms
+ss**: stylistic sets
+kern: kerning
+locl: localized forms
+rlig: required ligatures
+medi: medial forms
+init: initial forms
+isol: isolated forms
+fina: final forms
+mark: mark
+mkmk mark-to-mark positioning
+*/
