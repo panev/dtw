@@ -74,7 +74,7 @@ h3 {
 .button {
   height: 52px;
   border-radius: 8px;
-  border: 2px solid #99DDAC;
+  border: 1px solid #99DDAC;
   background: #BAF3CA;
   color: var(--c-gray-dark);
   font-family: "Garet Medium", sans-serif;
@@ -84,6 +84,7 @@ h3 {
 
 .button:hover {
   cursor: pointer;
+  background-color: #A0EFB6;
 }
 
 .block-common {
@@ -116,8 +117,9 @@ h3 {
 
 .form-email label {
   display: block;
-  text-transform: uppercase;
   font-family: "Garet Medium", sans-serif;
+  margin-bottom: 4px;
+  color: var(--c-gray-mid);
 }
 
 .form-email input {
@@ -126,7 +128,7 @@ h3 {
   border-radius: 8px;
   padding-left: 4px;
   min-width: 280px;
-  border: 2px solid var(--c-gray-dark);
+  border: 1px solid var(--c-gray-mid);
   font-family: "Garet Regular", sans-serif;
   font-size: 18px;
 }
@@ -137,6 +139,7 @@ h3 {
 
 .form-email input:focus {
   outline-color: #99DDAC;
+  outline-width: 1px;
 }
 
 
@@ -168,8 +171,50 @@ h3 {
 }
 
 
+@media screen and (max-width: 740px) {
+  :root {
+    --s-base: 100%;
+  }
+
+  body {
+    width: 100vw;
+  }
+
+  .util-pseudo::after,
+  .util-pseudo::before {
+    display: none;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h1 span {
+    font-size: 72px;
+  }
 
 
+  h3 {
+
+  }
+
+  .block-info {
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+
+  .block-info input {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .block-info .button {
+    margin: 16px 0;
+    width: 100%
+  }
+
+
+}
 
 
 
