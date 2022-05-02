@@ -22,22 +22,34 @@
   --c-gray-light: #9E9E9E;
   --c-gray-mid: #454545;
   --c-gray-dark: #333333;
+  --c-active-1: #99DDAC;
   --s-base: 480px;
 }
 
-
+::selection {
+  background-color: #FFDFCD;
+}
 
 body {
   font-family: "Garet Regular", sans-serif;
   font-feature-settings: "ss03";
   text-align: center;
   padding-bottom: 320px;
+  overflow-x: hidden;
 } 
+
+a {
+  color: var(--c-active-1);
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline wavy;
+}
 
 h1, h2, h3 {
   font-weight: inherit;
   color: var(--c-gray-mid);
-  /*font-feature-settings: "ss02";*/
 }
 
 
@@ -170,6 +182,89 @@ h3 {
   background: url("/img/pseudo.svg") no-repeat;
 }
 
+.portrait {
+  position: relative;
+  height: 350px;
+  overflow: visible;
+  margin: 56px 0;
+}
+
+.portrait svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: visible;
+}
+
+#base-mask {
+  transform-origin: center center;
+  animation: mask-rotate 60s infinite linear;
+}
+
+@keyframes mask-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(560deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+#p-fat-stroke {
+  position: relative;
+  transform-origin: center center;
+  transform: rotate(90deg);
+  z-index: 1000;
+  animation: fat-stroke-ani 55s infinite linear;
+}
+
+#p-img {
+  overflow: visible;
+}
+
+@keyframes fat-stroke-ani {
+  0% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(490deg);
+  }
+  100% {
+    transform: rotate(90deg); 
+  }
+}
+
+#p-deco-stroke {
+  transform-origin: center center;
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: deco-stroke 120s infinite linear;
+}
+
+@keyframes deco-stroke {
+  0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+  }
+  60% {
+      transform: translate(-50%, -50%) rotate(360deg);
+  }
+  100% {
+      transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+.email-success h2 {
+  margin-top: 120px;
+  margin-bottom: 0;
+}
+
+.email-success p {
+  text-align: center;
+}
 
 @media screen and (max-width: 740px) {
   :root {
