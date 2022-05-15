@@ -44,7 +44,7 @@ html {
 }
 
 a {
-  color: var(--c-active-1);
+  color: #64D283;
   text-decoration: underline;
 }
 
@@ -89,7 +89,10 @@ h3 {
 }
 
 .button {
+  display: inline-block;
+  line-height: 52px;
   height: 52px;
+  text-decoration: none;
   border-radius: 8px;
   border: 1px solid #99DDAC;
   background: #BAF3CA;
@@ -102,6 +105,7 @@ h3 {
 .button:hover {
   cursor: pointer;
   background-color: #A0EFB6;
+  text-decoration: none;
 }
 
 .block-common {
@@ -116,6 +120,7 @@ h3 {
 .block-info h2 {
   width: auto;
   display: inline-block;
+  margin-bottom: 16px;
 }
 
 .block-info p {
@@ -190,7 +195,7 @@ h3 {
 .portrait {
   position: relative;
   height: 420px;
-  margin: 56px 0 32px 0;
+  margin: 32px 0 32px 0;
   overflow: hidden;
 }
 
@@ -265,6 +270,26 @@ h3 {
   }
 }
 
+.block-details {
+  width: var(--s-base);
+  margin: 0 auto 64px auto;
+}
+
+.block-details strong {
+  display: block;
+  font-weight: normal;
+  font-family: 'Sunn Regular';
+  font-size: 56px;
+  color: var(--c-gray-dark);
+}
+
+.block-details img {
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+
+
 .email-success h2 {
   margin-top: 120px;
   margin-bottom: 0;
@@ -273,6 +298,15 @@ h3 {
 .email-success p {
   text-align: center;
 }
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 740px) {
   :root {
